@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <section class="parallax-ship"></section>
+  <section class="scroll-ship-container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Nature is Not a Place to Visit</h1>
+        <p>It is Home.</p>
+      </div>
+    </section>
+  </section>
+
+ <div class="focus-cards">
+    <a href="land.html" class="focus-card" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470');">
+      <div class="focus-overlay">
+        <h3>🌿 Land</h3>
+        <p>Safeguard forests, wildlife, and the planet beneath our feet.</p>
+      </div>
+    </a>
+
+    <a href="sea.html" class="focus-card" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+      <div class="focus-overlay">
+        <h3>🌊 Sea</h3>
+        <p>Protect oceans, coral reefs, and life below water.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoSphere Alliance</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+      document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EcoSphere</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="section hidden">
+    <h2>About EcoSphere Alliance</h2>
+    <p>We are a multidisciplinary environmental firm working to preserve and innovate solutions for Earth’s most vital ecosystems.</p>
+  </section>
+
+  <section class="section hidden">
+    <h2>Our Services</h2>
+    <ul>
+      <li>🌱 Sustainable Land Management</li>
+      <li>💧 Water Resource Engineering</li>
+      <li>🌊 Marine Conservation Strategies</li>
+      <li>⚡ Renewable Energy Integration</li>
+    </ul>
+  </section>
+
+  <section class="section hidden">
+    <h2>Join Us</h2>
+    <p>Want to make a difference? Collaborate with EcoSphere Alliance in shaping a greener tomorrow.</p>
+    <a class="btn" href="contact.html">Contact Us</a>
+  </section>
+
+  <script>
+    const shipImage = document.querySelector('.scroll-ship');
+    window.addEventListener('scroll', () => {
+      const offset = window.scrollY * 0.1;
+      shipImage.style.transform = `translateX(-50%) translateY(${offset}px)`;
+    });
+  </script>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Preserving Earth’s Lifelines</h1>
+      <p>From mountain peaks to ocean depths,<br> EcoSphere leads the way in sustainable innovation.</p>
+    </div>
+  </section>
+<section class="section hidden focus-section">
+  <h2>Explore Our Focus</h2>
+  <p>Choose your path: protecting the land or conserving the sea.</p>
+
+ 
+
+  <footer class="footer">
+    <p>© 2025 EcoSphere Alliance | info@ecospherealliance.com</p>
+  </footer>
+
+</body>
+</html>
