@@ -1,0 +1,446 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #005c8a;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+nav a.active {
+  border-bottom: 2px solid #005c8a;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1532274402917-5aadf881bdfd');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 90px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.btn-image:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+  padding: 80px 40px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #005c8a;
+}
+
+.section p, .section ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #005c8a;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00466b;
+}
+
+/* Footer */
+.footer {
+  background: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+}
+
+/* Scroll Animations */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 90px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.btn-image:hover {
+  transform: scale(1.05);
+}
+.hero-image-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  display: block;
+}
+
+.parallax-ship {
+  background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ship at sea"');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.scroll-ship-container {
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.scroll-ship {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  transform: translateX(-50%) translateY(0);
+  width: 100%;
+  height: auto;
+  max-height: none;
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+.scroll-ship-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-ship {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+/* Smooth scroll reveal */
+.section.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-image {
+  display: inline-block;
+  width: 300px; /* increase width */
+  height: 200px; /* increase height */
+  margin: 20px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 2rem; /* larger text */
+  font-weight: bold;
+  text-align: center;
+  line-height: 200px; /* match height for vertical centering */
+  text-decoration: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('container-ship-7235193.jpg') no-repeat center center/cover;
+  filter: blur(0.5px);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), black);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-overlay p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('forest.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay for contrast */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px #000;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.btn-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-image span {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.btn-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.focus-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.focus-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.focus-card {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.focus-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+}
+
+.focus-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-align: left;
+  backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+}
+
+.focus-overlay h3 {
+  font-size: 28px;
+  margin: 0 0 10px;
+}
+
+.focus-overlay p {
+  font-size: 16px;
+  margin: 0;
+}
